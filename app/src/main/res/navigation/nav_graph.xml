@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            tools:ignore="UnusedNavigation" app:startDestination="@+id/mainFragment2">
+
+    <fragment android:id="@+id/mainFragment2" android:name="com.example.myapplication.MainFragment"
+              android:label="fragment_main" tools:layout="@layout/fragment_main">
+        <action android:id="@+id/tosettingFragmant" app:destination="@id/settingFragmant"/>
+        <action android:id="@+id/toaccountFragment" app:destination="@id/accountFragment"/>
+    </fragment>
+
+
+
+    <fragment android:id="@+id/accountFragment" android:name="com.example.myapplication.AccountFragment"
+              android:label="fragment_account" tools:layout="@layout/fragment_account">
+        <action android:id="@+id/action_accountFragment_to_nameFragment" app:destination="@id/nameFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/settingFragmant" android:name="com.example.myapplication.SettingFragmant"
+              android:label="fragment_setting_fragmant" tools:layout="@layout/fragment_setting_fragmant"/>
+
+    <fragment android:id="@+id/nameFragment" android:name="com.example.myapplication.nameFragment"
+              android:label="fragment_name" tools:layout="@layout/fragment_name">
+        <argument android:name="nameAcc" app:argType="string" android:defaultValue=" "/>
+        <argument android:name="sinhvien" app:argType="com.example.myapplication.SV"/>
+    </fragment>
+</navigation>
